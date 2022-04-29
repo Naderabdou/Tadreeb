@@ -1,0 +1,53 @@
+<div class="form-group">
+    <label class="control-label col-lg-2">إسم المستخدم</label>
+    <div class="col-lg-10">
+        <input type="text" placeholder="إسم المستخدم" name="username">
+    </div>
+    @error('username')
+    <div class="alert alert-danger my-2" role="alert">{{$message}}</div>
+    @enderror
+</div>
+<div class="form-group">
+    <label class="control-label col-lg-2">البريد الإلكتروني</label>
+    <div class="col-lg-10">
+        <input type="email" placeholder="البريد الإلكتروني" name="email">
+    </div>
+    @error('email')
+    <div class="alert alert-danger my-2" role="alert">{{$message}}</div>
+    @enderror
+</div>
+<div class="form-group">
+    <label class="control-label col-lg-2">كلمة المرور</label>
+    <div class="col-lg-10">
+        <input type="password" placeholder="كلمة المرور" name="password">
+    </div>
+    @error('password')
+    <div class="alert alert-danger my-2" role="alert">{{$message}}</div>
+    @enderror
+</div>
+<div class="form-group">
+    <label class="control-label col-lg-2">إعادة كلمة المرور</label>
+    <div class="col-lg-10">
+        <input type="password" placeholder="إعادة كلمة المرور" name="password_confirmation" >
+    </div>
+    @error('password')
+    <div class="alert alert-danger my-2" role="alert">{{$message}}</div>
+    @enderror
+</div>
+<div class="form-group">
+    <label class="control-label col-lg-2">رقم الهاتف</label>
+    <div class="col-lg-10">
+        <select class="form-control" name="city_id">
+            <option selected disabled>Select Your City</option>
+            @foreach ($countries as $country)
+
+            <option value="{{$country->id}}">{{$country->name}} - {{$country->code}}</option>
+
+            @endforeach
+
+        </select>
+    </div>
+    @error('phone')
+    <div class="alert alert-danger my-2" role="alert">{{$message}}</div>
+    @enderror
+</div>
