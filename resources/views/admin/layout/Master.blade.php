@@ -5,7 +5,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
+    <meta name="admin_id" content="{{ auth()->guard('admin')->user()->id }}">
+    <meta name="time" content="{{now()}}">
 
 
     <title>Limitless - @yield('title')</title>
@@ -37,6 +39,8 @@
 
     <script src="/Admin/global_assets/js/demo_pages/dashboard.js"></script>
     <script src="/Admin/assets/js/app.js"></script>
+    <script src="{{ asset('js/app.js') }}" defer></script>
+
 
 
 

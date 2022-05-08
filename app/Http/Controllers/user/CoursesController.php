@@ -4,11 +4,14 @@ namespace App\Http\Controllers\user;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\user\courese\CoursesRequest;
+use App\Models\Admin;
 use App\Models\Courses;
 use App\Models\ScopesAdmin;
 use App\Models\User;
+use App\Notifications\NewCourseNotify;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Storage;
 
 class CoursesController extends Controller
@@ -45,6 +48,7 @@ class CoursesController extends Controller
             $data['video'] = $path;
         }
         Courses::create($data);
+
 
         $message=' تم الاضافة بنجاح';
 

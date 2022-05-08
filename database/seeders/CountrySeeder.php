@@ -2,9 +2,13 @@
 
 namespace Database\Seeders;
 
+use App\Models\Admin;
 use App\Models\City;
+use App\Models\ScopesAdmin;
+use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class CountrySeeder extends Seeder
 {
@@ -525,6 +529,40 @@ class CountrySeeder extends Seeder
             City::create($value);
 
         }
+
+        User::create([
+            'name'=>'nader',
+            'username'=>'student',
+            'role'=>'Student',
+            'phone'=>'0101111111',
+            'email'=>'nader@gmail.com',
+            'password'=>Hash::make('123456789'),
+            'city_id'=>'13',
+            'gender'=>'male',
+            'Privacy_policy'=>'on'
+
+
+        ]);
+        User::create([
+            'name'=>'ahmed',
+            'username'=>'ahmed',
+            'role'=>'instructor',
+            'phone'=>'01011112111',
+            'email'=>'instructor@gmail.com',
+            'password'=>Hash::make('123456789'),
+            'city_id'=>'13',
+            'gender'=>'male',
+            'Privacy_policy'=>'on'
+
+        ]);
+        Admin::create([
+            'name'=>'admin',
+            'email'=>'admin@gmail.com',
+            'password'=>Hash::make('admin')
+        ]);
+        ScopesAdmin::create([
+           'name'=>'برمجه إلحافا'
+        ]);
 
     }
 }

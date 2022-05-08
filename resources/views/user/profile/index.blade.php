@@ -2136,6 +2136,24 @@ $i=0;
                                                                     <!-- /.card -->
                                                         <!-- /.card -->
                                                     </div>
+                                                                <script>
+                                                                    function  d(){
+                                                                        var s= document.getElementById('nn')
+                                                                        var div_show = document.getElementById('show')
+                                                                        var cv =document.getElementById('cv_nn_{{$courses->id}}')
+
+                                                                        div_show.style.display='none'
+                                                                        cv.style.display='block'
+                                                                    }
+                                                                    function back(){
+                                                                        var s= document.getElementById('nn')
+                                                                        var div_show = document.getElementById('show')
+                                                                        var cv =document.getElementById('cv_nn_{{$courses->id}}')
+                                                                        div_show.style.display='block'
+                                                                        cv.style.display='none'
+
+                                                                    }
+                                                                </script>
 
                                                     @else
                                                             <div class="flash_empty text-center">
@@ -2146,24 +2164,7 @@ $i=0;
                                                             </div>
 
                                                     @endif
-                                                            <script>
-                                                                function  d(){
-                                                                    var s= document.getElementById('nn')
-                                                                    var div_show = document.getElementById('show')
-                                                                    var cv =document.getElementById('cv_nn_{{$courses->id}}')
 
-                                                                    div_show.style.display='none'
-                                                                    cv.style.display='block'
-                                                                }
-                                                                function back(){
-                                                                    var s= document.getElementById('nn')
-                                                                    var div_show = document.getElementById('show')
-                                                                    var cv =document.getElementById('cv_nn_{{$courses->id}}')
-                                                                    div_show.style.display='block'
-                                                                    cv.style.display='none'
-
-                                                                }
-                                                            </script>
 
                                                 @endforeach
 
@@ -2380,6 +2381,25 @@ $i=0;
 
                                                       <!-- /.card -->
                                                                 <!-- /.card -->
+                                                                <script>
+                                                                    function  c(){
+                                                                        var s= document.getElementById('nn')
+                                                                        var div_show = document.getElementById('show_come')
+                                                                        var cv =document.getElementById('cv_nn_{{$courses->id}}')
+
+                                                                        div_show.style.display='none'
+                                                                        cv.style.display='block'
+                                                                    }
+                                                                    function back_c(){
+                                                                        var s= document.getElementById('nn')
+                                                                        var div_show = document.getElementById('show_come')
+                                                                        var cv =document.getElementById('cv_nn_{{$courses->id}}')
+                                                                        div_show.style.display='block'
+                                                                        cv.style.display='none'
+
+                                                                    }
+                                                                </script>
+
                                                             </div>
 
                                                         @else
@@ -2392,24 +2412,6 @@ $i=0;
 
                                                     @endif
 
-                                                            <script>
-                                                                function  c(){
-                                                                    var s= document.getElementById('nn')
-                                                                    var div_show = document.getElementById('show_come')
-                                                                    var cv =document.getElementById('cv_nn_{{$courses->id}}')
-
-                                                                    div_show.style.display='none'
-                                                                    cv.style.display='block'
-                                                                }
-                                                                function back_c(){
-                                                                    var s= document.getElementById('nn')
-                                                                    var div_show = document.getElementById('show_come')
-                                                                    var cv =document.getElementById('cv_nn_{{$courses->id}}')
-                                                                    div_show.style.display='block'
-                                                                    cv.style.display='none'
-
-                                                                }
-                                                            </script>
 
                                                 @endforeach
 
@@ -2725,8 +2727,8 @@ $i=0;
                                                                                     </div>
                                                                                     <!-- /.course_instructor-data -->
                                                                                     <div class="corse-action">
-                                                                                        <a href="/Theme/#" class="gonna-corse">
-                                                                                            <i class="fa fa-paper-plane"></i> إذهب الي الدورة
+                                                                                        <a href="" class="gonna-corse">
+                                                                                            <i class="fa fa-paper-plane"></i> يرجا الانتظار لكي يتم تفعيل هذا الدوره
                                                                                         </a>
                                                                                         <a href="{{route('user.subscription.delete',['id'=>$course->id , 'user_id'=>auth()->user()->id] )}}" class="out-corse">
                                                                                             <i class="fa fa-sign-out"></i> إنسحاب من الدورة

@@ -92,7 +92,7 @@ class ExamController extends Controller
           'question'=>''
       ]);
      Exam_Answer::create($data);
-       $message = ' تم الإجابة بنجاح يرجا الانتظار لكم يتم التصحيح واستلام الشهادة';
+       $message = ' تم الإجابة بنجاح ';
 
        return redirect()->route('user.subscription.show',$data['course_id'])->with('message',$message);
    }

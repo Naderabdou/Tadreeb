@@ -14,7 +14,7 @@ class Subscription extends Controller
     public function store(Request $request){
      $user= User::findorFail($request->user_id);
      $user->course()->syncWithoutDetaching($request->course_id);
-        $message=' تم الاشتراك بنجاح يرجا الانتظار لكي يتم تفعيل الدورة من قبل الادمن  ';
+        $message=' تم الاشتراك بنجاح ';
 
         return redirect()->route('user.profile')->with('message', $message);
 

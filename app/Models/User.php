@@ -67,7 +67,9 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return $this->hasMany(Courses::class, 'instructor_id');
     }
-
+    public function receivesBroadcastNotificationsOn(){
+        return 'App.Models.User.'.$this->id;
+    }
     public function cv()
     {
         return $this->hasOne(CV::class, 'instructor_id');

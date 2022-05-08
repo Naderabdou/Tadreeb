@@ -13,6 +13,8 @@
     <meta name="keywords" content="">
     <meta name=viewport content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}" />
+    <meta name="user_id" content="{{ auth()->user()->id }}">
+    <meta name="time" content="{{now()}}">
 
     <meta charset="utf-8">
     <link href="/Theme/css/bootstrap.css" rel="stylesheet" type="text/css">
@@ -209,6 +211,7 @@
 <!-- Javascript Files -->
 <script src="/Theme/js/jquery.selectric.min.js" type="text/javascript"></script>
 <script src="/Theme/js/classie.js" type="text/javascript"></script>
+
 
 @yield('js')
 </body>

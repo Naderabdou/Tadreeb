@@ -90,7 +90,7 @@ die($e);
     public function success($user_id , $course_id){
         $user= User::findorFail($user_id);
         $user->course()->syncWithoutDetaching($course_id);
-        $message='تم الاشتراك والدفع بنجاح يرجا الانتظار لكي يتم تفعيل الدورة من قبل الادمن';
+        $message='تم الاشتراك والدفع بنجاح';
 
         return redirect()->route('user.profile')->with('message', $message);
     }

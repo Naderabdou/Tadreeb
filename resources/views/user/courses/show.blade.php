@@ -100,7 +100,7 @@
 
                     @else
                     <a href="{{route('user.profile')}}">
-                        <i class="fa fa-cog"></i> عدل ملفك الشخصي لتستطيع الاشتراك في الدورة
+                        <i class="fa fa-cog"></i> ( النوع ) عدل ملفك الشخصي لتستطيع الاشتراك في الدورة
                     </a>
                     @endif
 
